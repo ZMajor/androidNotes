@@ -1,14 +1,26 @@
 
-��Կ˽Կ
+公钥私钥
 http://www.blogjava.net/yxhxj2006/archive/2012/10/15/389547.html
 
-��ǽ
+翻墙
 https://github.com/goagent/goagent
 
-Android��Դ������վ
+Android资源下载网站
 http://www.androiddevtools.cn/
 
-��Դ��Ŀ��վ
+开源项目网站
 https://github.com/Trinea/android-open-project
 http://www.23code.com/
 http://www.godcoder.com/
+
+
+readme.txt
+
+在查看修改历史时，对于中文文件名，git log和gitk都会出现类似的乱码：
+sepg\344\274\232\350\256\256\346\200\273\347\273\223.doc
+
+通过看git的源码，找到了解决方案：
+
+git config core.quotepath false
+
+core.quotepath设为false的话，就不会对0x80以上的字符进行quote。中文显示正常
