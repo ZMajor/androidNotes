@@ -81,12 +81,13 @@ dev修改到一半， 需要去修改最新的BUG。
 1.保存工作现场：git stash
 2.切回需要修改的分支并创建修改分支：git checkout master	, git checkout -b issue-101
 3.在bug分支上修改并提交：git add readme.txt ， git commit -m "fix bug 101"
-4.修复后,切回master分支并完成合并,最后删除issue-101分支：git checkout master ，git branch -d issue-101
-5.接着回到dev分支干活并查看保存的工作现场：git checkout dev，git stash list
-6.两张恢复方法： 
+4.切回master分支并完成合并: git merge --no-ff -m "merged bug fix 101" issue-101
+5.最后删除issue-101分支：git checkout master ，git branch -d issue-101
+6.接着回到dev分支干活并查看保存的工作现场：git checkout dev，git stash list
+7.两张恢复方法： 
 	1.先恢复再删除stash内容： git stash apply，git stash drop   
 	2.恢复的同时把stash内容也删：git stash pop
-7. 可以多次stash内容，先用git stash list查看，然后恢复指定的stash，git stash apply stash@{0}
+8. 可以多次stash内容，先用git stash list查看，然后恢复指定的stash，git stash apply stash@{0}
 
 删除还没有被合并的分支，需要强行删除:git branch -D dev
 
