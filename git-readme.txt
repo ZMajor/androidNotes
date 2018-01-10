@@ -63,13 +63,11 @@
 进入文件目录：$ cd 目录 
 查看文件列表：$ ls
 
+创建：$ git branch dev
+切换：$ git checkout dev
+创建并切换分支：$ git checkout -b dev
 
-创建并切换分支：
-1.$ git checkout -b dev
-2.创建 $ git branch dev，切换 $ git checkout dev
-
-
-查看当前分支：git branch
+查看分支：git branch
 合并分支到当前分支 ：$ git merge dev
 删除分支：$ git branch -d dev
 查看分支合并图：$ git log --graph --pretty=oneline --abbrev-commit
