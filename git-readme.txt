@@ -1,3 +1,5 @@
+学习地址：https://www.liaoxuefeng.com/
+
 1. 安装配置
 	$ git config --global user.name "Your Name"
 	$ git config --global user.email "email@example.com"
