@@ -112,7 +112,7 @@ dev修改到一半， 需要去修改最新的BUG。
 
 删除标签：git tag -d v0.1
 推送标签到远程：git push origin v1.0（指定）    git push origin --tags（所有未提送的）
-删除远程标签：（先删本地再闪远程）  git tag -d v0.9 , git push origin :refs/tags/v0.9
+删除远程标签：（先删本地再删远程）  git tag -d v0.9 , git push origin :refs/tags/v0.9
 
 忽略某些文件时，需要编写.gitignore(文本编辑器里“保存”或者“另存为”就可以把文件保存为.gitignore了)
 .gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理
