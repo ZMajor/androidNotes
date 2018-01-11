@@ -55,7 +55,13 @@
 2. git push -u origin master 第一次推送master分支的所有内容；
 此后推送最新修改:git push origin master 或 git push
 
-提交到远程库：git push
+要关联多个远程库：
+1. 移除现在旧有的远程服务器origin：git remote rm origin
+2. 关联gitee远程库: git remote add gitee git@gitee.com:Zmajor/androidNotes.git 
+3. 关联github远程库: git remote add github git@github.com:ZMajor/androidNotes.git
+4. 查看远程库信息：git remote -v
+
+推送到指定远程库github的主分支master：git push github master
 从远程库更新：git pull
 
 
